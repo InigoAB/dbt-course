@@ -54,7 +54,7 @@ models:
   - name: dim_listings_w_hosts
     description: Cleansed table which contains Airbnb listings with host information.
     tests: 
-      - dbt_expectations.expect_table_row_count_to_equal_other_table_times_factor:
+      - dbt_expectations.expect_table_row_count_to_equal_other_table:
           compare_model: source('airbnb', 'listings')
     columns:
       - name: price
